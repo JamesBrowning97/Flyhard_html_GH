@@ -1,0 +1,435 @@
+body {
+  overflow: auto;
+  font-family: 'Anton', sans-serif;
+  color: white;
+  font-size: 1.25vw;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 1vw;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+.container {
+  /* CSS Smooth Scroll */
+  overflow-y: scroll; 
+  scroll-behavior: smooth;
+/*  scroll-snap-type: y mandatory;*/
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 0rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: skyblue;
+  transition: 0.5s;
+}
+
+.wrapper {
+  transition: all 5s;
+}
+
+.rows {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rows2 {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items;
+  color: lightgray;
+}
+
+#row1 {
+  background: url(img/flyhard.jpg) no-repeat center center/cover;
+}
+
+#row2 {
+  background-color: skyblue;
+}
+
+#row3 {
+  background: url(img/Backcom.png) no-repeat center center/cover;
+  color: skyblue;
+}
+
+#row4 {
+  background-color: skyblue;
+}
+
+#news {
+  background-color: white;
+}
+
+.footer {
+  background: url(img/Backfoot.png) no-repeat center center/cover fixed;
+  height: 75vh;
+  padding-left: 2.5vw;
+  display: flex;
+/*  justify-content: center;*/
+  align-items: center;
+  color: lightgray;
+}
+
+.columnfooterleft {
+  width: 30vw;
+}
+
+.columnfootmiddle {
+  width: 30vw;
+  padding: 5vh;
+  padding: 5vw;
+}
+
+.columnfootright {
+  width: 30vw;
+
+}
+
+.columnlogo{
+  float: center;
+  width: 50%;
+  padding-left: 25vw;
+}
+
+.columnwholeft{
+  float: left;
+  width: 50vw;
+  padding-left: 5vw;
+  padding-right: 2.5vw;
+  text-align: center;
+}
+
+.columnwhoright{
+  float: right;
+  width: 50vw;
+  padding-right: 5vw;
+  padding-left: 2.5vw;
+  padding-top: 5vh;
+}
+
+.newsleft{
+  float: left;
+  width: 50vw;
+  padding-left: 5vw;
+  padding-right: 2.5vw
+}
+
+.newsright{
+  float: left;
+  width: 50vw;
+  padding-right: 5vw;
+  padding-left: 2.5vw;
+  text-align: center;
+}
+
+.columnultimateleft{
+  float: left;
+  width: 50vw;
+  padding-left: 5vw;
+  padding-right: 2.5vw
+}
+
+.columnultimateright{
+  float: left;
+  width: 50vw;
+  padding-right: 5vw;
+  padding-left: 2.5vw;
+  text-align: center;
+}
+
+.columncommittee {
+  float: left;
+  padding-left: 4vw;
+/*  padding-right: 2vw;*/
+  padding-top: 5vh;
+  text-align: center;
+  width: 20vw;
+}
+
+.titles {
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: all 0s;
+}
+
+.slide-titles {
+    transform: translateX(0px);
+  opacity: 1;
+  transition: all 1s;
+}
+
+/*IMAGES*/
+.images {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 75vh;
+}
+
+.imagesfooter {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 25vh;
+}
+
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*POKEMON*/
+.pokemon {
+  width: 200px;
+  height: 200px;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overlay */
+  box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+  /* hover out transition */
+  transition: box-shadow 1s;
+  float: left;
+  margin: 2vw;
+}
+
+
+/* pokemone names */
+
+.pokemon::after {
+  width: 80%;
+  height: 80%;
+  display: block;
+  white-space: pre;
+  color: white;
+  text-align: center;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* hover out transition */
+  transition: opacity 1s .5s;
+}
+
+
+/* reveal pokemone picture on hover */
+
+.pokemon:hover {
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  transition: box-shadow 1s;
+}
+
+
+/* hide pokemone name on hover */
+
+.pokemon:hover::after {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+/*Pokemon 2*/
+
+.pokemon2 {
+  width: 200px;
+  height: 200px;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overlay */
+  box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+  /* hover out transition */
+  transition: box-shadow 1s;
+  margin-right: 4vw;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  float: left;
+}
+
+
+/* pokemone names */
+
+.pokemon2::after {
+  width: 80%;
+  height: 80%;
+  display: block;
+  white-space: pre;
+  color: white;
+  text-align: center;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* hover out transition */
+  transition: opacity 1s .5s;
+}
+
+
+/* reveal pokemone picture on hover */
+
+.pokemon2:hover {
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  transition: box-shadow 1s;
+}
+
+
+/* hide pokemone name on hover */
+
+.pokemon2:hover::after {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+#Chairman {
+  background-image: url(img/Chairman.png);
+  color: lightgray;
+}
+
+#Chairman::after {
+  content: 'Chairman'
+}
+
+#Welfare {
+  background-image: url(img/Welfare.png);
+  color: skyblue;
+}
+
+#Welfare::after {
+  content: 'Welfare Officer'
+}
+
+#MensC {
+  background-image: url(img/Captain.png);
+  color: skyblue;
+}
+
+#MensC::after {
+  content: 'Mens Captain'
+}
+
+#MensV {
+  background-image: url(img/MVCaptain.png);
+  color: lightgray;
+}
+
+#MensV::after {
+  content: 'Mens Vice'
+}
+
+#WomensC {
+  background-image: url(img/WCaptain.png);
+  color: lightgray;
+}
+
+#WomensC::after {
+  content: 'Womens Captain'
+}
+
+#WomensV {
+  background-image: url(img/WVCaptain.png);
+  color: skyblue;
+}
+
+#WomensV::after {
+  content: 'Womens Vice Captain'
+}
+
+#SS1 {
+  background-image: url(img/socialsec1.png);
+  color: skyblue;
+}
+
+#SS1::after {
+  content: 'Social Secretary'
+}
+
+#SS2 {
+  background-image: url(img/socialsec2.png);
+  color: lightgray;
+}
+
+#SS2::after {
+  content: 'Social Secretary'
+}
+
+#Facebook {
+  background-image: url(img/Facebook.png);
+  color: skyblue;
+}
+
+#Facebook::after {
+  content: 'Facebook'
+}
+
+#Instagram {
+  background-image: url(img/Instagram.png);
+  color: skyblue;
+}
+
+#Instagram::after {
+  content: 'Instagram'
+}
